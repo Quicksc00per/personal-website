@@ -1,82 +1,233 @@
-/*First page*/
-body {
-    background-color: rgb(41, 46, 46);
+/* Import a modern Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
+
+/* 🎨 First Page (Intro Section) */
+body {
+    background: linear-gradient(to bottom, #1b1e21, #252a2e);
+    color: whitesmoke;
+}
+
+/* Centered intro section with modern styling */
 .intro-section {
     display: flex;
-    background-color: rgb(41, 46, 46);
-    justify-content: center;
-   
-
-}
-.intro-text{
-    color: whitesmoke;
-    text-align: center;
-}
-/*Second page*/
-.row {
-    display: flex;
-    background-color: darkolivegreen;
-}
-/* Beggining of column 1 section add all code part of the section down below*/
-.column-1{
-    display: flex;
-    flex-direction: column;
-    background-color: dodgerblue;
-    width: 33%;
-  
-}
-.profile-pic img{
-    border-radius: 30%;
-    width: 50%;
-    height: 70%;
-}
-/*End of column 1*/ 
-
-/* Beggining of column 2 section add all code part of the section down below*/
-.column-2{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(108, 186, 138);
-    padding: 200 px;
-    align-items: center; /* Centers all child elements */
-  
-}
-.linkedin-link{
-    position: relative;
-    display: flex; /* Center image inside container */
     justify-content: center;
     align-items: center;
-    width: 40%; /* Fixed size container */
-    height: 40%; /* Keep it proportional */
-    padding: 20%;
-    border-radius: 50%; /* Makes it circular */
-    transition: box-shadow 0.3s ease-in-out;
- }
-.linkedin-link img{
- width: 110%;
- height: 100%;
-   transition: 0.3s ease-in-out; 
+    height: 100vh;
+    background: linear-gradient(to right, #222831, #31363F);
 }
 
-.linkedin-link img:hover{
-
-    transform: scale(1.1); /* Slight zoom effect */
-
+/* Intro text styling */
+.intro-text {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
-/*End of column 2*/ 
 
-/* Beggining of column 3 section add all code part of the section down below*/
-.column-3{
+/* 🔘 Modern Button Style */
+.intro-section.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #49BCFF, #FF0066);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #49BCFF, #FF0066);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* 🎨 Second Page Layout */
+.row {
     display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    background-color: rgb(202, 170, 23);
-    padding: 100px;
-    width: 33%;
-    margin-left: auto;
-    margin-right: 0px;
-   
-  
+    background: linear-gradient(to bottom, #2C3333, #395B64);
+    padding: 50px;
+    justify-content: space-around;
 }
-/*End of column 3*/ 
+
+/* 📍 Column 1: About Me Section */
+.column-1 {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #0082F9, #004AAD);
+    width: 33%;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    gap: 8px;
+}
+.column-1 .btn {
+    display: block; /* Makes buttons stack */
+    padding: 10px 20px;
+    margin: 3px 0; /* Decreases spacing between buttons */
+
+}
+.column-1 h1{
+    margin-top: 5px; /* Reduces space between heading and buttons */
+    margin-bottom: 5px;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    display: flex;
+    justify-content: center; /* Centers the image */
+    align-items: center;
+    width: 100%; /* Makes sure it fills the column */
+}
+.profile-pic img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    object-fit: cover;
+    border: 5px solid white;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 5px;
+    
+}
+
+
+/* 📍 Column 2: LinkedIn & Projects */
+.column-2 {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #6EC791, #469D7A);
+    padding: 40px;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+/*Linked-button style*/
+/* Centering the container and making items horizontal */
+.linked-button {
+    display: flex;
+    justify-content: center; /* Centers icons */
+    align-items: center; /* Aligns them vertically */
+    gap: 20px; /* Adds space between icons */
+    padding: 10px;
+}
+
+/* Style each social media link */
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+}
+
+/* Ensure all icons are the same size */
+.social-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures image fits properly */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.social-link img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* LinkedIn Icon Styling */
+.linkedin-link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(7, 98, 200);
+    box-shadow: 0px 4px 15px rgba(0, 0, 255, 0.5);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.linkedin-link img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Subtle hover effect */
+.linkedin-link:hover {
+    box-shadow: 0px 6px 20px rgba(0, 0, 255, 0.5);
+}
+
+.linkedin-link img:hover {
+    transform: scale(1.1);
+}
+
+/* 📍 Column 3: Resume & Contact */
+.column-3 {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #F5A623, #D98E04);
+    padding: 40px;
+    width: 33%;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Resume and Contact Styling */
+.column-3 h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Download Resume Button */
+.resume-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.resume-container a:hover {
+    background: #ff6600;
+    color: white;
+}
+
+/* 📧 Contact Section */
+.column-3 .contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.column-3 .contact-info a:hover {
+    color: #49BCFF;
+}
