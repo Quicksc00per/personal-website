@@ -1,0 +1,82 @@
+/*First page*/
+body {
+    background-color: rgb(41, 46, 46);
+}
+.intro-section {
+    display: flex;
+    background-color: rgb(41, 46, 46);
+    justify-content: center;
+   
+
+}
+.intro-text{
+    color: whitesmoke;
+    text-align: center;
+}
+/*Second page*/
+.row {
+    display: flex;
+    background-color: darkolivegreen;
+}
+/* Beggining of column 1 section add all code part of the section down below*/
+.column-1{
+    display: flex;
+    flex-direction: column;
+    background-color: dodgerblue;
+    width: 33%;
+  
+}
+.profile-pic img{
+    border-radius: 30%;
+    width: 50%;
+    height: 70%;
+}
+/*End of column 1*/ 
+
+/* Beggining of column 2 section add all code part of the section down below*/
+.column-2{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(108, 186, 138);
+    padding: 200 px;
+    align-items: center; /* Centers all child elements */
+  
+}
+.linkedin-link{
+    position: relative;
+    display: flex; /* Center image inside container */
+    justify-content: center;
+    align-items: center;
+    width: 40%; /* Fixed size container */
+    height: 40%; /* Keep it proportional */
+    padding: 20%;
+    border-radius: 50%; /* Makes it circular */
+    transition: box-shadow 0.3s ease-in-out;
+ }
+.linkedin-link img{
+ width: 110%;
+ height: 100%;
+   transition: 0.3s ease-in-out; 
+}
+
+.linkedin-link img:hover{
+
+    transform: scale(1.1); /* Slight zoom effect */
+
+}
+/*End of column 2*/ 
+
+/* Beggining of column 3 section add all code part of the section down below*/
+.column-3{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: rgb(202, 170, 23);
+    padding: 100px;
+    width: 33%;
+    margin-left: auto;
+    margin-right: 0px;
+   
+  
+}
+/*End of column 3*/ 
